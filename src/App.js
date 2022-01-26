@@ -7,7 +7,9 @@ import Activities from "./components/Activities";
 import Login from "./components/Login";
 import Register from "./components/Register";
 import Routines from "./components/Routines";
-// import MyRoutines from "./components/MyRoutines";
+import NewRoutine from "./components/HomeRoutine";
+import HomeRoutine from "./components/HomeRoutine";
+
 const BASE_URL = "https://fitnesstrac-kr.herokuapp.com/api";
 
 function App() {
@@ -58,6 +60,13 @@ function App() {
           routines={routines}
           setRoutines={setRoutines}
         />
+        
+      </Route>
+      {/* <Route path="/home-routines">
+        <HomeRoutine setUser={setUser} />
+      </Route> */}
+      <Route path="/home-routines">
+        <HomeRoutine setUser={setUser} />
       </Route>
       <Route path="/login">
         <Login setUser={setUser} />

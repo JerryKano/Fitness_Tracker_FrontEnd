@@ -23,9 +23,13 @@ const NavBar = (props) => {
                 <div>
                 <Link to="/activities">Activities</Link>
                 </div>
-                <div className="navMyRoutines">
-                <Link className="navLink" to="/my-routines">
-                My Routines
+                <div>
+                <Link to="/routines">Routines</Link>
+                </div>
+
+                <div>
+                <Link className="navLink" to="/home-routines">
+                Home Routines
                 </Link>
                 </div>
                 <div>
@@ -46,9 +50,9 @@ const NavBar = (props) => {
                 </div>
                 <div>
 
-                {
+                {/* {
                     locallySourcedToken && locallySourcedToken.length ? <p>Hi again, {props.user.username}</p> : ''
-                }
+                } */}
 
             </div>
                 
