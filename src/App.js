@@ -39,7 +39,7 @@ function App() {
   return (
     <>
       <Navbar setUser={setUser} user={user} />
-      <Route exact path="/">
+      <Route exact path="/my-routines">
         <Home setUser={setUser}/>
       </Route>
       

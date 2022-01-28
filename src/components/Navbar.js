@@ -17,22 +17,23 @@ const NavBar = (props) => {
     return (
         <div>
             <nav>
-                <div className='navBar'>
-                <Link to="/">Home</Link>
-                </div>
+                
                 <div>
-                <Link to="/activities">Activities</Link>
+                <Link to="/activities">All Activities</Link>
                 </div>
                 <div className="navRoutines">
-                <Link to="/routines">Routines</Link>
+                <Link to="/routines">All Routines</Link>
                 </div>
 
                 <div>
-                <Link className="navLink" to="/home-routines">
+                {/* <Link className="navLink" to="/home-routines">
                 Add Home Routine
-                </Link>
+                </Link> */}
                 </div>
-                <div>
+                {/* <div className='navBar'>
+                <Link to="/my-routines">My Routines</Link>
+                </div> */}
+                <p><div><p></p>
                     {
                         isLoggedIn ? 
                         <li><Link to="/" onClick={() => {
@@ -41,14 +42,27 @@ const NavBar = (props) => {
                         }}>Logout</Link></li>
                         
                         :
-                        <div>
+                        <div><p></p>
                         <li><Link to="/login">Login</Link></li>
                         <li><Link to="/register">Register</Link></li>
                         
                         </div>
                     }
-                </div>
-                <div>
+                </div></p>
+                <div className='navBar'>
+                {
+                        isLoggedIn ?
+                        <>
+                        <Link to="/my-routines">My Routines</Link>
+                        <p><Link className="navLink" to="/home-routines">Add My Routine</Link></p>
+                        </>
+                        :
+                        <div>
+                        Please login and refresh to see My Routines
+                        
+                        </div>
+                    }
+                <div></div>
 
                 {/* {
                     locallySourcedToken && locallySourcedToken.length ? <p>Hi again, {props.user.username}</p> : ''
