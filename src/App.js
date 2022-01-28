@@ -9,7 +9,7 @@ import Register from "./components/Register";
 import Routines from "./components/Routines";
 // import NewRoutine from "./components/HomeRoutine";
 import HomeRoutine from "./components/HomeRoutine";
-import DeleteRoutine from "./components/DeleteRoutine";
+// import DeleteRoutine from "./components/DeleteRoutine";
 
 const BASE_URL = "https://fitnesstrac-kr.herokuapp.com/api";
 
@@ -62,9 +62,6 @@ function App() {
           setRoutines={setRoutines}
         />
         
-      </Route>
-      <Route path="/delete-routines">
-        <DeleteRoutine setUser={setUser} />
       </Route>
       <Route path="/home-routines">
         <HomeRoutine setUser={setUser} />
