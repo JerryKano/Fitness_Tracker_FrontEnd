@@ -28,18 +28,18 @@ const Routines = (props) => {
 
       {returnedRoutines.map((routine) => {
         return (
-          <div id="Links">
-            <div className="routine">
-              <p>Routine Name: {routine.name}</p>
-              <p>Creator: {routine.creatorName}</p>
-              <p>Goal: {routine.goal}</p>
+          <div id="Links" class="card-body card border-primary border-2 bg-light mb-3">
+            <div className="routine" >
+              <p><h5 class="card-header mb-3">Routine Name: {routine.name}</h5></p>
+              <p><b>Creator:</b> {routine.creatorName}</p>
+              <p><b>Goal:</b> {routine.goal}</p> 
         {routine.activities.map((activity) => {
         return (
             <div className="activity">
-            <p>Activities: {activity.name}</p>
-            <p>Activity Description: {activity.description}</p>
-            <p>Duration: {activity.duration}</p>
-            <p>Count: {activity.count}</p>
+            <p><b>Activity:</b> {activity.name}</p>
+            <p><b>Activity Description:</b> {activity.description}</p>
+            <p><b>Duration:</b> {activity.duration}</p>
+            <p><b>Count:</b> {activity.count}</p>
             </div>
         );
         })}

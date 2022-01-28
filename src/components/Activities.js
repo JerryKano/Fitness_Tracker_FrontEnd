@@ -30,10 +30,10 @@ const Activities = (props) => {
 
       {returnedActivities.map((activity) => {
         return (
-          <div id="Links">
+          <div id="Links" class="card-body card border-primary border-2 bg-light mb-3">
             <div className="activities">
-              <p>Activities: {activity.name}</p>
-              <p>Activity Description: {activity.description}</p>
+              <p><h6>Activities:</h6> {activity.name}</p>
+              <p><h6>Activity Description:</h6> {activity.description}</p>
             </div>
           </div>
         );

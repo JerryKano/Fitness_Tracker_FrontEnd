@@ -1,3 +1,7 @@
+const BASE_URL = "https://fitnesstrac-kr.herokuapp.com/api"
+
+export default BASE_URL;
+
 export { default as NavBar } from './NavBar';
 export { default as AllPosts } from './AllPosts';
 export { default as Login} from './Login';

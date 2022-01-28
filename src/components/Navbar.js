@@ -23,7 +23,7 @@ const NavBar = (props) => {
                 <div>
                 <Link to="/activities">Activities</Link>
                 </div>
-                <div>
+                <div className="navRoutines">
                 <Link to="/routines">Routines</Link>
                 </div>
 

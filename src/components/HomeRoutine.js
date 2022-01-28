@@ -11,16 +11,19 @@ const HomeRoutine = (props) => {
     // const [location, setLocation] = useState('');
     // const [willDeliver, setWillDeliver] = useState(false);
 
+    // const [userRoutine, setUserRoutine] = useState([]);
     const [name, setName] = useState("");
     const [goal, setGoal] = useState("");
     const [isPublic, setIsPublic] = useState(true);
     const [errorMessage, setErrorMessage] = useState("");
 
+    const locallySourcedToken = localStorage.getItem("token");
+
     const handleSubmit = async (event) => {
 
         event.preventDefault();
 
-        const locallySourcedToken = localStorage.getItem("token");
+        // const locallySourcedToken = localStorage.getItem("token");
         
         try{ 
             const response = await fetch(`${BASE_URL}/routines`, {
@@ -32,6 +35,7 @@ const HomeRoutine = (props) => {
                 body: JSON.stringify({
                     name: name,
                     goal: goal,
+                    isPublic: isPublic
                   }),
             })
             const data = response.json();
@@ -55,22 +59,10 @@ const HomeRoutine = (props) => {
         }
     }
 
-    const deletePost = async () => {
-        try {
-            const response = await fetch(`${BASE_URL}/posts/${post._id}`, {
-                method: "DELETE",
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Authorization': `Bearer ${locallySourcedToken}`
-                }
+    
 
-            })
-            const data = await response.json();
-        }
-        catch (err) {
-            console.log(err);
-        }
-    }
+        
+
 
     return (
         <div class="mb-3">
@@ -86,7 +78,11 @@ const HomeRoutine = (props) => {
                 <input type="radio" id="setIsPublicFalse" value={false} onChange={(event) => setIsPublic(event.target.value)}></input><br/>
 
                 <button type="submit" className="btn btn-primary">Create New Routine</button>
+                {/* <button className='delete-button' onClick={deleteRoutine(userRoutine.id)}>Delete Routine</button> */}
             </form>
+            
+
+
         </div>
     )
 }
