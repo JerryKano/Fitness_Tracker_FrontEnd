@@ -15,11 +15,12 @@ const NavBar = (props) => {
     const locallySourcedToken = localStorage.getItem("token"); 
 
     return (
-        <div>
-            <nav>
+        <div class>
+            <nav class="navbar navbar-dark bg-dark text-light bg-gradient">
                 
                 <div>
-                <Link to="/activities">All Activities</Link>
+                <a class="nav-item nav-link" href="#">
+                <Link to="/activities">All Activities</Link></a>
                 </div>
                 <div className="navRoutines">
                 <Link to="/routines">All Routines</Link>
@@ -57,16 +58,15 @@ const NavBar = (props) => {
                         <p><Link className="navLink" to="/home-routines">Add My Routine</Link></p>
                         </>
                         :
-                        <div>
-                        Please login and refresh to see My Routines
-                        
-                        </div>
+                        <div><a>
+                        Please login and refresh to see Your Routines
+                        </a></div>
                     }
                 <div></div>
 
-                {/* {
-                    locallySourcedToken && locallySourcedToken.length ? <p>Hi again, {props.user.username}</p> : ''
-                } */}
+                {
+                    locallySourcedToken && locallySourcedToken.length ? <p>You're logged in!</p> : ''
+                }
 
             </div>
                 

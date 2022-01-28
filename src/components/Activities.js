@@ -32,10 +32,13 @@ const Activities = (props) => {
         return (
           <div id="Links" class="card-body card border-primary border-2 bg-light mb-3">
               <br></br>
-            <div className="activities">
-              <p><h6>Activity:</h6> {activity.name}</p>
-              <p><h6>Activity Description:</h6> {activity.description}</p>
-            </div>
+            <div class="bg-primary" className="activities">
+              <div class="card-header mb-3">
+              <p><h5>Activity:</h5> {activity.name}</p>
+              </div>
+              </div>
+              <p><b>Activity Description:</b> {activity.description}</p>
+            
           </div>
         );
       })}
