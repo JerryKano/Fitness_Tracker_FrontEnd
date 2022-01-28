@@ -4,7 +4,7 @@ const BASE_URL = "https://fitnesstrac-kr.herokuapp.com/api";
 
 const DeleteRoutine = async (props) => {
     const { routineId } = props;
-    const localUserToken = localStorage.getItem('userToken');
+    const localUserToken = localStorage.getItem('token');
     const deleteRoutine = async () => {
         try {
             const response = await fetch(`${BASE_URL}/routines/${routineId}`, {

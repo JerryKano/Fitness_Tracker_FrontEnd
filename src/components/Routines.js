@@ -29,6 +29,7 @@ const Routines = (props) => {
       {returnedRoutines.map((routine) => {
         return (
           <div id="Links" class="card-body card border-primary border-2 bg-light mb-3">
+            <br></br>
             <div className="routine" >
               <p><h5 class="card-header mb-3">Routine Name: {routine.name}</h5></p>
               <p><b>Creator:</b> {routine.creatorName}</p>

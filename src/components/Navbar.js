@@ -29,7 +29,7 @@ const NavBar = (props) => {
 
                 <div>
                 <Link className="navLink" to="/home-routines">
-                Home Routines
+                Add Home Routine
                 </Link>
                 </div>
                 <div>

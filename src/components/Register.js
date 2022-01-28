@@ -66,26 +66,25 @@ const Register = () => {
     return (
         <div className='login-form'>
             <form onSubmit={handleSubmit}>
-                <h2>New User</h2>
-
-                <input type='text' placeholder='Username' value={username} onChange={(event) => {
+            <br></br>
+                New User:
+                <input type='text' className="form-control" placeholder='Username' value={username} onChange={(event) => {
                     // console.log('Username input', event.target.value)
                     setUsername(event.target.value)
                     // console.log('The state user', username)
                 }}>
                 </input>
+                Password:
                 <br></br>
-                <br></br>
-                <input type='text' placeholder='Password' value={password} onChange={(event) => {
+                <input type='text' className="form-control" placeholder='Password' value={password} onChange={(event) => {
                     // console.log('Password input', event.target.value)
                     setPassword(event.target.value)
                     // console.log('The state', password)
                 }}>
                 </input>
                 <br></br>
-                <br></br>
-                <button type='submit'>
-                    Sign Up
+                <button className="btn btn-primary" type='submit'>
+                    Register
                 </button>
             </form>
 

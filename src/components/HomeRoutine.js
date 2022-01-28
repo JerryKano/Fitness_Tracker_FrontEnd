@@ -66,6 +66,7 @@ const HomeRoutine = (props) => {
 
     return (
         <div class="mb-3">
+            <br></br>
             <form onSubmit={handleSubmit}>
 
                 <input type="text" className="form-control" value={name} placeholder="New Routine Name" onChange={(event) => setName(event.target.value)}></input><br/>

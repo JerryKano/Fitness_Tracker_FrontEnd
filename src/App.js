@@ -40,10 +40,10 @@ function App() {
     <>
       <Navbar setUser={setUser} user={user} />
       <Route exact path="/">
-        <Home />
+        <Home setUser={setUser}/>
       </Route>
       
-      {/* <Route path="/my-routines">
+      {/* <Route path="/">
         <MyRoutines
           user={user}
           setUser={setUser}

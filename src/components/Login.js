@@ -42,6 +42,7 @@ const Login = (props) => {
         return (
             <div>
                 <form onSubmit={handleSubmit}>
+                <br></br>
                     Username:
                     <br></br>
                     <input type="text" className="form-control" value={username} placeholder="Enter Username" onChange={(event) => setUsername(event.target.value)}></input>

@@ -31,6 +31,7 @@ const Activities = (props) => {
       {returnedActivities.map((activity) => {
         return (
           <div id="Links" class="card-body card border-primary border-2 bg-light mb-3">
+              <br></br>
             <div className="activities">
               <p><h6>Activities:</h6> {activity.name}</p>
               <p><h6>Activity Description:</h6> {activity.description}</p>
