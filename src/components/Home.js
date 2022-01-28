@@ -3,7 +3,7 @@ import { Router } from "react-router-dom/cjs/react-router-dom.min";
 // import { DeleteRoutine } from "./DeleteRoutine";
 
 const locallySourcedToken = localStorage.getItem("token");
-const BASE_URL = 'http://fitnesstrac-kr.herokuapp.com/api';
+const BASE_URL = 'https://fitnesstrac-kr.herokuapp.com/api';
 
 const UserRoutines = (props) => {
 
